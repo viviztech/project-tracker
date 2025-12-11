@@ -4,7 +4,7 @@ import axios from 'axios';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { FaDownload, FaFilePdf, FaFileImage } from 'react-icons/fa';
-import 'frappe-gantt/dist/frappe-gantt.css';
+import '../frappe-gantt.css';
 
 const ProjectGantt = ({ projectId }) => {
     const [tasks, setTasks] = useState([]);
