@@ -1,0 +1,13 @@
+node_modules
+.env
+.DS_Store
+dist
+build
+coverage
+.vscode
+.idea
+mongodb-macos-x86_64-7.0.4.tgz
+mongodb-macos-x86_64-7.0.4/
+mongodb-data/
+mongodb.log
+*.log

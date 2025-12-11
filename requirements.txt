@@ -1,0 +1,236 @@
+
+🧭 PROJECT TRACKER WEBSITE — FUNCTIONAL SPECIFICATION
+
+1️⃣ Login Page
+Purpose
+To authenticate users and provide secure access based on their role (Admin / Project Manager / Team Member / Viewer).
+Functionalities
+Category
+Description
+User Authentication
+Users must log in using their email ID and password (or Microsoft 365 credentials if integrated with Azure AD).
+Forgot Password
+Sends password reset link to registered email.
+Remember Me Option
+Keeps users logged in (session-based).
+Role-Based Redirection
+After login: • Admin → Admin Dashboard • PM → Projects Overview • Team Member → My Tasks • Viewer → Dashboard (read-only)
+Security
+Encrypt passwords, session timeout after inactivity, captcha (optional).
+Registration / Admin Invite
+New users can be added only by Admin via invitation.
+
+2️⃣ Dashboard Page (Home)
+Purpose
+Provide a visual summary of all active, completed, or pending projects and tasks.
+Functionalities
+Category
+Description
+Overview Widgets
+- Total Projects - Active Projects - Completed Projects - Tasks Pending - Overdue Milestones
+Charts / Visuals
+- Project Health by Status (Pie) - Project Progress (Bar/Donut) - Resource Utilization (Line) - Budget vs. Actual (Bar)
+Quick Actions
+Buttons: Add Project, View All Projects, Add Task, Generate Report.
+Notifications
+Display overdue milestones, pending approvals, or high-risk alerts.
+Drill-Down Links
+Clicking on a widget redirects to filtered project/task lists.
+Data Refresh
+Auto-refresh every 10 minutes or on-demand via “Refresh” button.
+
+3️⃣ Projects Page
+Purpose
+To view, add, update, and manage all projects in one central grid.
+Functionalities
+Category
+Description
+Project List View
+Table view of projects with columns: Project Name, Owner, Start/End Date, Status, Progress %, Priority, and Health.
+Sorting & Filtering
+By Department, Status, Owner, or Date.
+Search
+Keyword search across project names and owners.
+Add New Project
+Opens a form to capture: • Project Name • Description • Department • Owner/Manager • Start & End Dates • Budget • Priority • Status • Team Members.
+Edit / Update
+Authorized users (Admin/PM) can update fields and status.
+Archive / Delete
+Move completed projects to archive or delete permanently (Admin only).
+Export
+Export to Excel / PDF / CSV.
+Progress Indicator
+Color-coded progress bar (e.g., Green: On Track, Yellow: At Risk, Red: Delayed).
+
+4️⃣ Project Details Page
+Purpose
+Show complete details and working elements of an individual project.
+Sections & Functionalities
+Section
+Functionality
+Overview Tab
+Summary of key project data: Project Name, Description, Owner, Dates, Status, Progress, Health.
+Milestones Tab
+Add/Edit/Delete milestones, with completion percentage.
+Tasks Tab
+View all tasks under this project. Add new task → assign to team → set priority and due date.
+Team Tab
+List of assigned members with roles and contact info.
+Risks & Issues Tab
+Risk Log: Risk Description, Severity, Impact, Mitigation Plan, Owner, Status.
+Documents Tab
+Upload, download, and version control for project documents.
+Notes / Comments Tab
+Collaborative discussion or updates between team members.
+Timeline / Gantt
+Visual representation of milestones and tasks with dependencies.
+Activity Log
+Auto-log all project updates (who changed what and when).
+Buttons
+Save, Update, Export, Notify Team.
+
+5️⃣ Tasks Page
+Purpose
+Central management of all tasks across all projects.
+Functionalities
+Category
+Description
+Task Board View
+Kanban-style: To Do → In Progress → Done.
+List View
+Grid view with columns: Task Name, Assigned To, Project, Status, Start Date, Due Date, Priority.
+Add Task
+Assign to member, select project, set due date, add notes and attachments.
+Task Dependency
+Define predecessor/successor tasks (optional).
+Progress Update
+Members can update status % or mark complete.
+Filter & Sort
+By Project, Priority, Assigned User, or Status.
+My Tasks
+Auto-filtered view showing only logged-in user’s tasks.
+Notifications
+Due date reminders or overdue task alerts.
+
+6️⃣ Resource Management Page
+Purpose
+Manage and monitor resource assignments and workloads.
+Functionalities
+Category
+Description
+Resource Directory
+Employee list with designation, skill set, department, and current assignments.
+Allocation Tracker
+Shows which projects a resource is allocated to, % utilization, and available capacity.
+Add/Edit Resource
+Admin can add or update resource data.
+Search & Filter
+Filter by skill, department, or availability.
+Calendar View
+Visual representation of each resource’s workload timeline.
+Export Report
+Resource utilization report in Excel/PDF.
+
+7️⃣ Timeline / Gantt Chart Page
+Purpose
+Visualize project schedules and interdependencies.
+Functionalities
+Category
+Description
+Gantt Chart
+Display project start & end dates, milestones, and tasks in a timeline format.
+Drag-and-Drop
+Adjust task/milestone dates directly.
+Color Coding
+Different colors for Completed / In Progress / Delayed tasks.
+Filters
+View by project, department, or owner.
+Critical Path Display
+Highlight interdependent critical activities.
+Export
+Download chart as PDF or image.
+
+8️⃣ Reports & Analytics Page
+Purpose
+Generate visual performance dashboards and custom reports.
+Functionalities
+Category
+Description
+Power BI / Chart Integration
+Visual widgets for: Project Health, Task Progress, SLA Adherence, Resource Load, Risk Levels, Budget Utilization.
+Custom Report Builder
+Filters for project, time range, department.
+Scheduled Reports
+Automated email delivery via Power Automate.
+Export Options
+Excel, PDF, or CSV.
+KPIs & Metrics
+Project completion %, average delay, resource efficiency, cost variance.
+
+9️⃣ Document Repository Page
+Purpose
+Centralized storage for project documents and deliverables.
+Functionalities
+Category
+Description
+Folder Structure
+Auto-create folder per project.
+Upload / Download / Delete
+Permissions-based document control.
+Version History
+View and restore older versions.
+Tagging & Search
+Search by project, tag, or file name.
+Access Permissions
+Admin defines who can view/edit files.
+
+🔟 Admin / Settings Page
+Purpose
+System configuration, user management, and automation setup.
+Functionalities
+Category
+Description
+User Management
+Add/Edit/Delete users, assign roles.
+Role-Based Access
+Define access for Admin, PM, Member, Viewer.
+Project Categories
+Define types (Internal, Client, Maintenance, etc.)
+Email / Notification Rules
+Set reminder frequency, escalation alerts.
+Custom Fields
+Add new fields to project/task forms.
+Integrations
+Connect to Power Automate, Teams, Outlook, ServiceDesk Plus, etc.
+Backup & Restore
+Export configuration and data.
+
+1️⃣1️⃣ Help / Feedback Page
+Purpose
+Provide assistance and collect improvement suggestions.
+Functionalities
+Category
+Description
+Help Topics
+FAQs and user guide.
+Submit Feedback
+Form for users to submit issues, enhancement requests, or comments.
+Ticket Routing
+Feedback auto-logged to ServiceDesk or email.
+Contact Info
+Support contact email and phone.
+
+
+🔐 User Roles & Permissions Summary
+Role
+Access Level
+Admin
+Full control (all pages, settings, reports, users)
+Project Manager
+Manage projects, tasks, resources within assigned projects
+Team Member
+Update tasks, view project details assigned to them
+Viewer / Client
+Read-only access to dashboards and reports
+
+
