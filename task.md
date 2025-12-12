@@ -1,0 +1,8 @@
+- [ ] Fix Network Error on Login <!-- id: 0 -->
+    - [/] Investigate Codebase <!-- id: 1 -->
+    - [x] Identify API URL Issue <!-- id: 2 -->
+    - [x] Fix Client .env.production <!-- id: 3 -->
+    - [x] Fix Cookie Configuration for Cross-Site <!-- id: 4 -->
+    - [x] Investigate Bad Gateway Error <!-- id: 5 -->
+    - [x] Fix MONGO_URI on Server <!-- id: 7 -->
+    - [/] Verify Fixes <!-- id: 6 -->

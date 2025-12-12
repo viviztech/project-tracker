@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(cors({
     origin: process.env.NODE_ENV === 'production'
-        ? [process.env.CLIENT_URL]
+        ? [process.env.CLIENT_URL, 'https://project-tracker-frontend-kkm3lr-454f34-91-108-110-202.traefik.me']
         : ['http://localhost:5173', 'http://localhost:5174'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
