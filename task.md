@@ -5,4 +5,10 @@
     - [x] Fix Cookie Configuration for Cross-Site <!-- id: 4 -->
     - [x] Investigate Bad Gateway Error <!-- id: 5 -->
     - [x] Fix MONGO_URI on Server <!-- id: 7 -->
-    - [/] Verify Fixes <!-- id: 6 -->
+    - [x] Verify Fixes <!-- id: 6 -->
+    - [x] Debug Login 401 Error <!-- id: 8 -->
+    - [x] Debug Dashboard Loading Error <!-- id: 9 -->
+    - [x] Debug Chrome Network Error <!-- id: 10 -->
+    - [x] Investigate Dashboard API Failure <!-- id: 11 -->
+    - [x] Fix NODE_ENV in Dockerfile <!-- id: 12 -->
+    - [ ] Final Verification <!-- id: 13 -->

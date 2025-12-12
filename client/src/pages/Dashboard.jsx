@@ -29,6 +29,7 @@ const Dashboard = () => {
     const [stats, setStats] = useState(null);
     const [workload, setWorkload] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -41,6 +42,7 @@ const Dashboard = () => {
                 setWorkload(workloadRes.data);
             } catch (error) {
                 console.error("Error fetching dashboard data", error);
+                setError(error.response?.data?.message || error.message);
             } finally {
                 setLoading(false);
             }
@@ -50,7 +52,14 @@ const Dashboard = () => {
     }, []);
 
     if (loading) return <div className="p-6">Loading dashboard...</div>;
-    if (!stats || !workload) return <div className="p-6">Error loading dashboard</div>;
+    if (error) return (
+        <div className="p-6 text-red-600 bg-red-50 rounded border border-red-200 m-6">
+            <h3 className="font-bold">Error loading dashboard</h3>
+            <p>{error}</p>
+            <p className="text-sm mt-2 text-gray-600">Please check console for more details.</p>
+        </div>
+    );
+    if (!stats || !workload) return <div className="p-6">Error loading dashboard (No Data)</div>;
 
     const projectStatusData = {
         labels: stats.charts.projectsByStatus.map(item => item._id),
