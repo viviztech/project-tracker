@@ -1,14 +1,16 @@
 - [ ] Fix Network Error on Login <!-- id: 0 -->
-    - [/] Investigate Codebase <!-- id: 1 -->
+    - [x] Investigate Codebase <!-- id: 1 -->
     - [x] Identify API URL Issue <!-- id: 2 -->
     - [x] Fix Client .env.production <!-- id: 3 -->
     - [x] Fix Cookie Configuration for Cross-Site <!-- id: 4 -->
     - [x] Investigate Bad Gateway Error <!-- id: 5 -->
     - [x] Fix MONGO_URI on Server <!-- id: 7 -->
     - [x] Verify Fixes <!-- id: 6 -->
-    - [x] Debug Login 401 Error <!-- id: 8 -->
-    - [x] Debug Dashboard Loading Error <!-- id: 9 -->
+- [ ] Debug Login 401 Error <!-- id: 8 -->
+    - [x] Suggest Default Crendentials <!-- id: 14 -->
+    - [x] Fix NODE_ENV in Dockerfile <!-- id: 12 -->
+    - [x] Fix Frontend Credentials (axios) <!-- id: 15 -->
+- [ ] Debug Dashboard Loading Error <!-- id: 9 -->
     - [x] Debug Chrome Network Error <!-- id: 10 -->
     - [x] Investigate Dashboard API Failure <!-- id: 11 -->
-    - [x] Fix NODE_ENV in Dockerfile <!-- id: 12 -->
-    - [ ] Final Verification <!-- id: 13 -->
+    - [/] Final Verification <!-- id: 13 -->
